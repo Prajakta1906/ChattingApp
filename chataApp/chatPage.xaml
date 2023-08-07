@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chataApp.chatPage">
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Frame BorderColor="black" CornerRadius="0.5" Padding="0,5,0,0"  >
+
+
+
+                <ListView x:Name="myflist" 
+                      BindingContext="{Button}" IsPullToRefreshEnabled="True"
+                      RowHeight="100"  ItemSelected="myflist_ItemSelected" >
+                    <ListView.ItemTemplate  >
+                        <DataTemplate  >
+                            <ViewCell  >
+
+                                <StackLayout Orientation="Horizontal" Padding="5,10,5,10" Spacing="15">
+
+                                    <ImageButton Source="{Binding myphotolink}"  CornerRadius="180" BorderWidth="1" 
+                                                 BorderColor="Black" WidthRequest="80"  
+                                                 BackgroundColor="Transparent" Clicked="ImageButton_Clicked" />
+
+                                    <Label TextColor="Black"  FontAttributes="Bold" FontSize="20" VerticalOptions="Center"  Text="{Binding myusername} "  />
+
+                                   
+
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Frame>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

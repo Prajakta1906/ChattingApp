@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chataApp.signupPage" NavigationPage.HasNavigationBar="False" Visual="Material" BackgroundColor="#1C375C">
+    <ContentPage.Content>
+
+        <StackLayout Padding="15" Spacing="20"  >
+
+            <StackLayout Orientation="Horizontal" Margin="10,50,0,50">
+
+                <StackLayout>
+                
+                    <Label Text="H! " FontSize="75" TextColor="White" />
+                    <Label Text="HAVE A CHATTY DAY " FontSize="20" TextColor="yellow" />
+                </StackLayout>
+
+                <ImageButton x:Name="pickerbtn" Source="user1.png" HeightRequest="120" WidthRequest="120"  BackgroundColor="Transparent"
+                         Margin="50,0,0,0" HorizontalOptions="Center" Padding="0"  Clicked="pickerbtn_Clicked" BorderWidth="2" BorderColor="white" CornerRadius="100" 
+                       />
+
+            </StackLayout>
+
+           
+            <!--<Label  Text="Full Name" TextColor="White" Margin="0,30,0,0" FontSize="Medium" FontAttributes="Bold" />-->
+            <Entry Placeholder="Enter Name" BackgroundColor="LightBlue" HeightRequest="55" PlaceholderColor="Gray" x:Name="Name_entry" />
+
+            <!--<Label  Text="Mobile Number" TextColor="White" Margin="0,15,0,0" FontSize="Medium" FontAttributes="Bold" />-->
+            <Entry Placeholder="Enter Mobile Number" PlaceholderColor="Gray" HeightRequest="55" x:Name="Mobile_entry"
+                   Keyboard="Numeric" MaxLength="10" />
+
+            <!--<Label  Text="Username" TextColor="White" Margin="0,20,0,0" FontSize="Medium" FontAttributes="Bold" />-->
+            <Entry Placeholder="Create Username" BackgroundColor="LightBlue" MaxLength="10" HeightRequest="55" PlaceholderColor="Gray" x:Name="Username_entry" />
+
+            <!--<Label  Text="Password" TextColor="White" Margin="0,20,0,0" FontSize="Medium" FontAttributes="Bold" />-->
+            <Entry Placeholder="Create Password" PlaceholderColor="Gray" HeightRequest="55" IsPassword="True" x:Name="Password_entry" MaxLength="15" />
+            
+            <Entry Placeholder="Confirm Password" PlaceholderColor="Gray" HeightRequest="55" IsPassword="True" x:Name="CPassword_entry" MaxLength="15" />
+
+            <StackLayout Orientation="Horizontal" Margin="0,50,0,0">
+                <Button  HorizontalOptions="StartAndExpand"   Text="Go Back" TextColor="Black" FontAttributes="Bold" HeightRequest="50" WidthRequest="120"
+                         x:Name="Back_button" Clicked="Back_button_Clicked" BackgroundColor="MediumPurple" CornerRadius="10" FontSize="15" />
+                <Button  HorizontalOptions="EndAndExpand" BackgroundColor="MediumPurple"  Text="Sign Up" TextColor="Black" FontAttributes="Bold" FontSize="15"
+                         x:Name="signupbtn" Clicked="SignUpDone_button_Clicked" HeightRequest="50" WidthRequest="120" CornerRadius="10"/>
+            </StackLayout>
+
+
+            <Label x:Name="dlink" TextColor="red" FontSize="5" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

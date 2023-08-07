@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            
+            BackgroundImageSource="chatBG.jpeg"
+
+            NavigationPage.HasBackButton="False"
+            Title="{Binding Source=ChatMates}"
+   
+           
+    x:Class="chataApp.conversationPage">
+    
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <CollectionView ItemsSource="{Binding DatabaseItems}" >
+                <CollectionView.ItemTemplate>
+                   
+                    <DataTemplate>
+
+                        <StackLayout Orientation="Horizontal" Spacing="1">
+
+                            <!--<Frame BackgroundColor="pink" BorderColor="Black" CornerRadius="50" Margin="50,0,0,5" HeightRequest="20" >
+
+                                
+
+                                <Label x:Name="MyLabel"   Padding="10,0,0,0" Text="{Binding MyProperty}" HorizontalOptions="StartAndExpand"  FontSize="17" TextColor="Black">
+
+                                    <Label.GestureRecognizers>
+
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                                    </Label.GestureRecognizers>
+                                    
+                                </Label>
+                                     
+                                       
+                                      
+
+                            </Frame>-->
+
+
+                            <ImageButton x:Name="userinfo" Source="user1.png"  HeightRequest="40" CornerRadius="50"  Margin="5,10,10,10" />
+
+                            <Label x:Name="MyLabel"  Padding="5,0,0,5" Text="{Binding MyProperty}" VerticalTextAlignment="Center"
+                                   HorizontalOptions="StartAndExpand"  FontSize="18" TextColor="White" />
+
+
+                        </StackLayout>
+                        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"   >
+
+                <Frame CornerRadius="90" HeightRequest="25" WidthRequest="270" >
+
+                    <Entry Placeholder="Enter Message ..." PlaceholderColor="Brown" Opacity="0.5" x:Name="recordData" HorizontalOptions="FillAndExpand" Margin="0,-10,-5,-15"   TextColor="Black"/>
+
+                </Frame>
+
+                <Frame HeightRequest="25" WidthRequest="30" CornerRadius="80"   >
+
+                    <ImageButton Source="send.png"   Clicked="Button_Clicked"  Margin="-10"  
+                             BackgroundColor="Transparent"/>
+
+
+                </Frame>
+                    
+                    
+                    
+               
+            </StackLayout>
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

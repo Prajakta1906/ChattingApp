@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chataApp.homePage"
+           
+            xmlns:local="clr-namespace:chataApp"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            
+            SelectedTabColor="Black"
+            UnselectedTabColor="gray"
+            
+            SelectedItem="Contacts"
+            
+            NavigationPage.HasBackButton="False"
+            Title="ChatsApp"
+            
+            >
+
+    <local:chatPage Title="Message" IconImageSource="message.png"  />
+
+    <local:contactPage Title="Contacts" BackgroundColor="white" IconImageSource="contacts.png" />
+
+
+
+
+</TabbedPage>

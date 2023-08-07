@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chataApp.MainPage" BackgroundColor="#1C375C" Visual="Material" NavigationPage.HasNavigationBar="False"
+             >
+    <RelativeLayout>
+        <StackLayout>
+
+            <Grid  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Source="the.gif" Grid.Row="0" Margin="0,20,0,0" Aspect="AspectFit"  HeightRequest="250" IsAnimationPlaying="True" BackgroundColor="Transparent" WidthRequest="95"/>
+                <Label  Text="ChatsApp... "   Margin="0,85,0,0" FontSize="20"   TextColor="#1C375C"  FontAttributes="Bold" TextDecorations="Underline" FontFamily="serif" HorizontalOptions="CenterAndExpand"   />
+
+
+                <Frame Grid.Row="1" Margin="20,20,20,30" BackgroundColor="White" HasShadow="True" CornerRadius="50" >
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20">
+
+                        <StackLayout>
+                            <Label  Text="Chats App !" FontSize="30 " TextColor="#1C375C" FontAttributes="Bold"  HorizontalOptions="CenterAndExpand"   />
+                            <Label  Text="Login in to account " Margin="0,0,0,0" FontSize="15 " TextColor="Gray"  HorizontalOptions="CenterAndExpand"   />
+                            <Entry
+                       Placeholder="Username" Margin="0,40,0,0" HeightRequest="50"  BackgroundColor="LightBlue" x:Name="User_entry"
+                        />
+                            <Entry
+                       Placeholder="Password"  Margin="0,5,0,0" IsPassword="True" HeightRequest="50" BackgroundColor="LightBlue"  x:Name="Pass_entry"
+                        />
+
+                            <Button
+                              Text="Login" BackgroundColor="#1C375C" Margin="0,10,0,0" TextColor="White" CornerRadius="20" x:Name="Login_button" Clicked="loginbtn_Clicked"
+                            />
+                            <Label  Text="Forgot Password " Margin="0,5,0,0" FontSize="15 " TextColor="Gray"  HorizontalOptions="CenterAndExpand"   />
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label  Text="Don't have an account ? " Margin="0,5,0,0" FontSize="15 " TextColor="Gray"  HorizontalOptions="CenterAndExpand"   />
+                                <Label  Text="Sign Up " Margin="-25,5,0,0" FontSize="15 " TextDecorations="Underline"  TextColor="#1C375C"  HorizontalOptions="CenterAndExpand" x:Name="sign_Button"  >
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+
+                                </Label>
+
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                </Frame>
+
+
+            </Grid>
+
+
+        </StackLayout>
+    </RelativeLayout>
+
+
+</ContentPage>
+
+<!--<Button x:Name="loginbtn" Clicked="loginbtn_Clicked"
+                BackgroundColor="white" TextColor="Black"
+                Text=" continue" Margin="50,100,50,0" />-->
+

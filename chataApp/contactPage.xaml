@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chataApp.contactPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="white"  >
+
+
+            <Frame BorderColor="black" CornerRadius="0.5" Padding="0,4,0,0"  >
+                
+          
+
+            <ListView x:Name="myconlist" ItemSelected="myconlist_ItemSelected" ItemsSource="{Binding myy}"
+                      BindingContext="{Button}" IsPullToRefreshEnabled="True"
+                      RowHeight="100"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate  >
+                        <ViewCell  >
+
+                            <StackLayout Orientation="Horizontal" Padding="5,10,5,10"  Spacing="15" >
+
+                                    <ImageButton Source="{Binding thelink}" WidthRequest="80" CornerRadius="180"   BackgroundColor="Black"/>
+
+                                    <Label TextColor="Black" FontSize="25" FontAttributes="Bold" Text="{Binding userID} " VerticalTextAlignment="Center" />
+
+                                    <Label HorizontalTextAlignment="End" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" Margin="0,0,5,0"
+                                       TextColor="Gray" FontAttributes="Italic" FontSize="15" Text="{Binding number}" />
+
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            </Frame>
+           
+
+            <StackLayout Orientation="Horizontal" Padding="10" >
+
+            <SearchBar Placeholder="Search Contact" VerticalOptions="EndAndExpand" Margin="0,0,0,20"
+                       TextChanged="SearchBar_TextChanged" />
+
+                <ImageButton x:Name="profilebtn" Source="{Binding mydat}"
+                             VerticalOptions="EndAndExpand" 
+                         Clicked="ImageButton_Clicked" BackgroundColor="Transparent"
+                        HeightRequest="60" HorizontalOptions="EndAndExpand" WidthRequest="70" Margin="0,0,5,10"
+                        
+                         />
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
